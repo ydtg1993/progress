@@ -11,7 +11,9 @@ use progress\src\Loading;
 $total = 77;//任务总数
 
 //Loading::PROGRESS_TYPE_STRAIGHT条形进度条
+
 //Loading::PROGRESS_TYPE_ROUND圆形进度条
+
 $LOAD = new Loading(Loading::PROGRESS_TYPE_ROUND);
 
 $LOAD->setTotal($total);//设置任务数
