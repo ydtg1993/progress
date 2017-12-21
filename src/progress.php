@@ -13,6 +13,11 @@ namespace progress\src;
 class Loading
 {
     /**
+     * @var
+     */
+    static public $progress;
+    
+    /**
      * 总任务数
      * @var int
      */
@@ -31,7 +36,7 @@ class Loading
     private $ratio;
 
     /**
-     * 睡眠时间
+     * 任务间隔时间
      * @var int
      */
     private $sleep = 0;
@@ -42,14 +47,33 @@ class Loading
     private $type;
 
     /**
-     * 直线进度条总长度
+     * 条形进度条总长度
      * @var int
      */
     static public $progress_long = 350;
 
+    /**
+     * 3D进度条类型
+     * @var string
+     */
+    static public $progress_striped_type = false;
+
+    static public $STRIPED_CONF = array(
+        1 => " navy ruler",
+        2 => " orange ruler",
+        3 => " cyan ruler",
+        4 => " navy ruler-2",
+        5 => " orange ruler-2",
+        6 => " cyan ruler-2",
+        7 => " navy ruler-3",
+        8 => " orange ruler-3",
+        9 => " cyan ruler-3",
+    );
+
     //进度条类型
     const PROGRESS_TYPE_STRAIGHT = 0;
     const PROGRESS_TYPE_ROUND = 1;
+    const PROGRESS_TYPE_STRIPED = 2;
 
     /**
      * Loading constructor.
@@ -59,6 +83,9 @@ class Loading
     function __construct($type = self::PROGRESS_TYPE_STRAIGHT)
     {
         require_once "progressType.php";
+        ignore_user_abort(true);    //设置断开连接继续执行
+        header('X-Accel-Buffering: no');    //关闭buffer
+        ob_start(); //打开输出缓冲控制
         $this->type = $type;
     }
 
@@ -68,16 +95,13 @@ class Loading
     public function init()
     {
         if(!$this->total){
-            throw new \Exception("task total Must be set up");
+            throw new \Exception("task parameter total Must be set up");
         }
+        self::$progress = sprintf("progress_bar_%s",time());
+        $this->counter = 0;
         $this->ratio = self::$progress_long / $this->total;
 
         $progress_bar = progressType::getProgress($this->type);
-
-        ignore_user_abort(true);    //设置断开连接继续执行
-        header('X-Accel-Buffering: no');    //关闭buffer
-        ob_start(); //打开输出缓冲控制
-
         for ($i = 0; $i < 4; $i++) {
             echo null;
             @ob_get_clean();
@@ -120,15 +144,6 @@ class Loading
     }
 
     /**
-     * 设置进度条总长度
-     * @param $long
-     */
-    public function setProgressLength($long)
-    {
-        self::$progress_long = $long;
-    }
-
-    /**
      * 设置总任务数
      * @param int $total
      */
@@ -137,4 +152,20 @@ class Loading
         $this->total = $total;
     }
 
+    /**
+     * 设置条形进度条总长度
+     * @param $long
+     */
+    public function setProgressLength($long)
+    {
+        self::$progress_long = $long;
+    }
+
+    /**
+     * @param int $type
+     */
+    public function setStripedType($type)
+    {
+        self::$progress_striped_type = self::$STRIPED_CONF[$type];
+    }
 }

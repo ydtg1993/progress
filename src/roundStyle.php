@@ -12,6 +12,63 @@ class roundConf
     static function ini()
     {
         return <<<EOF
+<style>        
+body {
+  background-color: #2f3439;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  display: inline-block;
+  margin: 15px;
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 10px solid #5d6771;
+  background-color: #fffde8;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+.progress-radial:after, .progress-radial:before {
+  content: '';
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -17.5px;
+  margin-top: -17.5px;
+  background: #fffde8;
+  position: absolute;
+  z-index: 999;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+}
+.progress-radial:after {
+  z-index: 998;
+  box-shadow: none;
+  transform: translate(0, -72.5px);
+}
+.progress-radial b:after {
+  color: #fffde8;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  font-weight: 900;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  background-color: #2f3439;
+  border-radius: 50%;
+  margin-left: -25%;
+  margin-top: -25%;
+  text-align: center;
+  line-height: 90px;
+  font-size: 30px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3) inset, 0 0 0 10px #5d6771;
+}
 /* -------------------------------------
  * Mixin for progress-% class
  * ------------------------------------- */
@@ -1024,6 +1081,7 @@ class roundConf
 .progress-100 b:after {
   content: "100%";
 }
+</style>
 EOF;
 
     }    
