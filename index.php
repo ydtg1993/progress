@@ -11,11 +11,14 @@ use progress\src\Loading;
 
 
 $total = 30;//任务总数
-//第一个进度任务
-$LOAD = new Loading(Loading::PROGRESS_TYPE_ROUND);
+
+//设置
+$LOAD = new Loading(Loading::PROGRESS_TYPE_STRAIGHT);
 $LOAD->setTotal($total);//设置任务数
-$LOAD->init();//初始化
 $LOAD->setSleep(1);//设置任务间隔时间
+
+//第一个进度任务
+$LOAD->init();//初始化
 for ($i=0;$i<$total;$i++)
 {
     //do 处理完成一条任务，进度更新
