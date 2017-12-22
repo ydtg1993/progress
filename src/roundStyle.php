@@ -7,7 +7,7 @@
  */
 namespace progress\src;
 
-class roundConf
+class roundStyle
 {
     static function ini()
     {

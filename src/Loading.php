@@ -15,7 +15,7 @@ class Loading
     /**
      * @var
      */
-    static public $progress;
+    static public $loading;
     
     /**
      * 总任务数
@@ -71,16 +71,16 @@ class Loading
     );
 
     //进度条类型
-    const PROGRESS_TYPE_STRAIGHT = 0;
-    const PROGRESS_TYPE_ROUND = 1;
-    const PROGRESS_TYPE_STRIPED = 2;
+    const LOAD_TYPE_STRAIGHT = 0;
+    const LOAD_TYPE_ROUND = 1;
+    const LOAD_TYPE_STRIPED = 2;
 
     /**
      * Loading constructor.
      * 进度条类型
      * @param int $type
      */
-    function __construct($type = self::PROGRESS_TYPE_STRAIGHT)
+    function __construct($type = self::LOAD_TYPE_STRAIGHT)
     {
         require_once "progressType.php";
         ignore_user_abort(true);    //设置断开连接继续执行
@@ -97,7 +97,7 @@ class Loading
         if(!$this->total){
             throw new \Exception("task parameter total Must be set up");
         }
-        self::$progress = sprintf("progress_bar_%s",time());
+        self::$loading = sprintf("progress_bar_%s",time());
         $this->counter = 0;
         $this->ratio = self::$progress_long / $this->total;
 
@@ -156,12 +156,13 @@ class Loading
      * 设置条形进度条总长度
      * @param $long
      */
-    public function setProgressLength($long)
+    public function setStraightLength($long)
     {
         self::$progress_long = $long;
     }
 
     /**
+     * 设置3d进度条类型
      * @param int $type
      */
     public function setStripedType($type)

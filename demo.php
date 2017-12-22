@@ -10,10 +10,10 @@ require_once "./src/Loading.php";
 use progress\src\Loading;
 
 
-$total = 30;//任务总数
+$total = 15;//任务总数
 
 //设置
-$LOAD = new Loading(Loading::PROGRESS_TYPE_ROUND);
+$LOAD = new Loading(Loading::LOAD_TYPE_ROUND);
 $LOAD->setTotal($total);//设置任务数
 $LOAD->setSleep(1);//设置任务间隔时间
 

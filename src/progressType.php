@@ -19,14 +19,14 @@ class progressType
     static function getProgress($type)
     {
         switch ($type){
-            case Loading::PROGRESS_TYPE_STRAIGHT:
+            case Loading::LOAD_TYPE_STRAIGHT:
                 return self::straightProgress();
                 break;
-            case Loading::PROGRESS_TYPE_ROUND:
+            case Loading::LOAD_TYPE_ROUND:
                 require_once "roundStyle.php";
                 return self::roundProgress();
                 break;
-            case Loading::PROGRESS_TYPE_STRIPED;
+            case Loading::LOAD_TYPE_STRIPED;
                 require_once "stripedStyle.php";
                 return self::stripedProgress();
                 break;
@@ -48,14 +48,14 @@ EOF;
 
     static function straightProgress()
     {
-        $progress = Loading::$progress;
+        $loading = Loading::$loading;
         $progress_long = Loading::$progress_long;
         return <<<EOF
 <body style="background-color: #f5f7f9;color: #6c6c6c;">
 <p id="pro" style="margin-top: 65px;text-align: center;"></P>
 <div class="container" style="left: 50%; position: absolute;top: 100px;transform: translate(-50%, -50%);width:{$progress_long}px;">
 	<div class="progress" style=" background-color: #e5e9eb;height: 0.25em;position: relative;width:{$progress_long}px;">
-		<div id="{$progress}" class="progress-bar" style="
+		<div id="{$loading}" class="progress-bar" style="
   background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
   background-size: 24em 0.25em;
   height: 100%;
@@ -75,7 +75,7 @@ EOF;
 <script> 
 function progress(proportion){
    var total_long = {$progress_long};
-   var dom = document.getElementById("{$progress}");
+   var dom = document.getElementById("{$loading}");
    var current_width = parseInt(dom.style.width);
    
    var progress = total_long * proportion;
@@ -89,8 +89,8 @@ EOF;
     
     static function roundProgress()
     {
-        $progress = Loading::$progress;
-        $style = roundConf::ini();
+        $progress = Loading::$loading;
+        $style = roundStyle::ini();
         return <<<EOF
  {$style}
 <body style="background-color: #f5f7f9;color: #6c6c6c;">
@@ -111,7 +111,7 @@ EOF;
     
     static function stripedProgress()
     {
-        $progress = Loading::$progress;
+        $loading = Loading::$loading;
         $progress_type = Loading::$progress_striped_type;
         if(!$progress_type){
             $class = " navy ruler";
@@ -119,14 +119,14 @@ EOF;
             $class = $progress_type;
         }
 
-        $style = stripedConf::ini();
+        $style = stripedStyle::ini();
         return <<<EOF
  {$style}
   <body style="background-color: #f5f7f9;color: #D8DBE4;">      
 				<div class="flexy-column">
 					<div class="progress-factor flexy-item">
 						<div class="progress-bar">
-							<div class="bar has-rotation has-colors{$class}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="{$progress}">
+							<div class="bar has-rotation has-colors{$class}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="{$loading}">
 								<div class="tooltip white"></div>
 								<div class="bar-face face-position roof percentage"></div>
 								<div class="bar-face face-position back percentage"></div>
@@ -142,7 +142,7 @@ EOF;
 <script>				
 function progress(proportion){
       var ratio = Math.ceil(proportion * 100);
-      var dom = document.getElementById("{$progress}");
+      var dom = document.getElementById("{$loading}");
      
       dom.setAttribute('aria-valuenow',ratio);
 }

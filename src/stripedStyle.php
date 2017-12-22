@@ -7,7 +7,7 @@
  */
 namespace progress\src;
 
-class stripedConf
+class stripedStyle
 {
     static function ini()
     {
