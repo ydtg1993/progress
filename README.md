@@ -14,6 +14,7 @@ php任务进度条
 
 #Loading::LOAD_TYPE_STRIPED 3D进度条
 
+'''
 $total = 77;//任务总数
 
 $LOAD = new Loading(Loading::LOAD_TYPE_ROUND);
@@ -41,6 +42,6 @@ for ($i=0;$i<$total;$i++){
     $LOAD->progress();
     
 }
-
+'''
 
 
