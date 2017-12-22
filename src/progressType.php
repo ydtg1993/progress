@@ -80,16 +80,7 @@ function progress(proportion){
    
    var progress = total_long * proportion;
    
-   var dict = Math.floor(progress - current_width);
-   var time = (1 / dict)*1000;
-   var t = window.setInterval(function(){
-       current_width = current_width + 1;
-       dom.style.width = current_width + 'px';
-          
-     if(current_width >= progress){
-      clearInterval(t);
-     }
-   },time); 
+   dom.style.width= progress + 'px'; 
    document.getElementById("pro").innerHTML = Math.floor(proportion * 100)+ '%';
 }
 </script>
@@ -103,7 +94,7 @@ EOF;
         return <<<EOF
  {$style}
 <body style="background-color: #f5f7f9;color: #6c6c6c;">
-<div class="progress-radial" id="{$progress}" data-progress="0">
+<div class="progress-radial" id="{$progress}">
 <b></b>
 </div>
 </body>
@@ -112,18 +103,7 @@ function progress(proportion){
       var ratio = Math.ceil(proportion * 100);
       var dom = document.getElementById("{$progress}");
      
-      var current_progress = parseInt(dom.getAttribute("data-progress"));
-      var dict = ratio - current_progress;
-      var time = (0.6 / dict)*1000;
-      
-      var t = window.setInterval(function(){
-         current_progress = current_progress + 1;
-         dom.setAttribute("data-progress",current_progress);
-         dom.className = "progress-radial progress-"+current_progress
-         if(current_progress >= ratio){
-            clearInterval(t);
-         }
-      },time); 
+      dom.className = "progress-radial progress-"+ratio
 }
 </script>
 EOF;

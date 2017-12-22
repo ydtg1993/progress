@@ -6,7 +6,7 @@
  * Time: 12:04
  */
 set_time_limit(0);
-require_once "./src/progress.php";
+require_once "./src/Loading.php";
 use progress\src\Loading;
 
 
