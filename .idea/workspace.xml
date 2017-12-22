@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ee038f-ee38-4213-b092-b9ce55bb6b0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jscs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.php" afterPath="$PROJECT_DIR$/demo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Loading.php" afterPath="$PROJECT_DIR$/src/Loading.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/progressType.php" afterPath="$PROJECT_DIR$/src/progressType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roundStyle.php" afterPath="$PROJECT_DIR$/src/roundStyle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stripedStyle.php" afterPath="$PROJECT_DIR$/src/stripedStyle.php" />
     </list>
     <ignored path="progress.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,56 +24,12 @@
     <favorites_list name="progress" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="demo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Loading.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Loading.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="25" />
-              <folding>
-                <element signature="e#6#110#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progressType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/progressType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1488">
-              <caret line="99" column="7" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
-              <folding>
-                <marker date="1513909071170" expanded="true" signature="2046:2123" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roundStyle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/roundStyle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="80">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -110,11 +60,11 @@
         <option value="$PROJECT_DIR$/src/themeStyle.php" />
         <option value="$PROJECT_DIR$/src/progress.php" />
         <option value="$PROJECT_DIR$/src/Loading.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/stripedStyle.php" />
         <option value="$PROJECT_DIR$/src/roundStyle.php" />
         <option value="$PROJECT_DIR$/src/progressType.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -159,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -194,7 +145,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,7 +221,8 @@
       <updated>1513743506448</updated>
       <workItem from="1513743508037" duration="37393000" />
       <workItem from="1513839340494" duration="4792000" />
-      <workItem from="1513906835735" duration="2455000" />
+      <workItem from="1513906835735" duration="2492000" />
+      <workItem from="1513910480190" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="php任务进度条">
       <created>1513744003637</created>
@@ -343,17 +294,24 @@
       <option name="project" value="LOCAL" />
       <updated>1513907691102</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="php任务进度条">
+      <created>1513909306827</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1513909306827</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44640000" />
+    <option name="totallyTimeSpent" value="44805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25799572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -565,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="80">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
       </provider>
