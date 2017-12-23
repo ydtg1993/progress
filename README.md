@@ -9,15 +9,13 @@ php任务进度条
     #可选配置参数
 
     #Loading::LOAD_TYPE_STRAIGHT 条形进度条
-
     #Loading::LOAD_TYPE_ROUND 圆形进度条
-
     #Loading::LOAD_TYPE_STRIPED 3D进度条
 
     $LOAD = new Loading(Loading::LOAD_TYPE_ROUND);
 
     #$LOAD->setStraightLength(int); 注：对于条进度条Loading::LOAD_TYPE_STRAIGHT长度设置
-     #$LOAD->setStripedType(int); 注：对于3D进度条Loading::LOAD_TYPE_STRIPED类型设置 (1~9整数)
+    #$LOAD->setStripedType(int); 注：对于3D进度条Loading::LOAD_TYPE_STRIPED类型设置 (1~9整数)
 
     $total = 77;//任务总数
     
@@ -32,7 +30,6 @@ php任务进度条
         //do 处理完成一条任务，进度更新
     
         $LOAD->progress();
-
     }
 
 
