@@ -16,12 +16,12 @@ php任务进度条
 
     #$LOAD->setStraightLength(int); 注：对于条进度条Loading::LOAD_TYPE_STRAIGHT长度设置
     #$LOAD->setStripedType(int); 注：对于3D进度条Loading::LOAD_TYPE_STRIPED类型设置 (1~9整数)
+    
+    #$LOAD->setSleep(int);注：设置任务间隔时间
 
     $total = 77;//任务总数
     
     $LOAD->setTotal($total);//设置任务数
-
-    #$LOAD->setSleep(1);注：设置任务间隔时间
 
     $LOAD->init();//初始化进度条
 
