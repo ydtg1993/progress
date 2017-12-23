@@ -25,7 +25,7 @@ php任务进度条
 
     #$LOAD->setStripedType(int);注：对于3D进度条Loading::LOAD_TYPE_STRIPED类型设置 1~9
 
-    $LOAD->setTotal($total);//设置任务数
+     $LOAD->setTotal($total);//设置任务数
 
     #$LOAD->setSleep(1);注：设置任务间隔时间
 
