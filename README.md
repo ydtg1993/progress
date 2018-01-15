@@ -32,5 +32,5 @@ php任务进度条
         $LOAD->progress();
     }
 
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/PHP-DI/PHP-DI.svg)](http://isitmaintained.com/project/PHP-DI/PHP-DI "Percentage of issues still open")
+(https://gitee.com/uploads/images/2017/1222/163242_fc687ec5_1018778.png)
 
