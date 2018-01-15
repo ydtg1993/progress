@@ -9,8 +9,13 @@ php任务进度条
     #可选配置参数
 
     #Loading::LOAD_TYPE_STRAIGHT 条形进度条
+    ![条形进度条](https://github.com/ydtg1993/progress/blob/master/straight.png)
+    
     #Loading::LOAD_TYPE_ROUND 圆形进度条
+    ![圆形进度条](https://github.com/ydtg1993/progress/blob/master/round.png)
+    
     #Loading::LOAD_TYPE_STRIPED 3D进度条
+    ![3D进度条](https://github.com/ydtg1993/progress/blob/master/3d.png)
 
     $LOAD = new Loading(Loading::LOAD_TYPE_ROUND);
 
@@ -32,6 +37,4 @@ php任务进度条
         $LOAD->progress();
     }
 
-
-![这里写图片描述](https://gitee.com/uploads/images/2017/1222/)
 
