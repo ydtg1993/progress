@@ -32,5 +32,5 @@ php任务进度条
         $LOAD->progress();
     }
 
-
+[![](doc/img.png)](http://php-di.org/)
 
