@@ -33,4 +33,5 @@ php任务进度条
     }
 
 (https://gitee.com/uploads/images/2017/1222/163242_fc687ec5_1018778.png)
+[![](doc/img.png)](https://gitee.com/uploads/images/2017/1222/163242_fc687ec5_1018778.png)
 
